@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postagem Social - Gabriel Dantas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-share-alt"></i> Postagem Social</h1>
+            <p>Crie e compartilhe posts simulando redes sociais como Facebook e LinkedIn</p>
+            <p class="author">Desenvolvido por: Gabriel Dantas</p>
+        </header>
+
+        <main>
+            <section class="create-post">
+                <h2><i class="fas fa-edit"></i> Criar Novo Post</h2>
+                <form id="postForm" class="post-form">
+                    <div class="form-group">
+                        <label for="postTitle">Título do Post</label>
+                        <input type="text" id="postTitle" placeholder="Digite um título interessante..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postContent">Conteúdo do Post</label>
+                        <textarea id="postContent" placeholder="Compartilhe suas ideias, pensamentos ou notícias..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Publicar Post
+                    </button>
+                </form>
+                
+                <div id="apiStatus" class="api-status"></div>
+            </section>
+
+            <section class="post-preview">
+                <h2><i class="fas fa-eye"></i> Post Publicado</h2>
+                <div class="post-rendered" id="postRendered">
+                    <p class="placeholder-text">Seu post aparecerá aqui após ser publicado...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Este projeto simula a comunicação com uma API real (<a href="https://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a>)</p>
+            <p>Desenvolvido como parte de um desafio front-end - Gabriel Dantas &copy; <span id="currentYear"></span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
